@@ -21,6 +21,11 @@ header .logo {
   font-weight: 600;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+}
+
 nav a {
   color: white;
   text-decoration: none;
@@ -34,8 +39,9 @@ nav a:hover {
 
 .menu-toggle {
   display: none;
-  font-size: 24px;
+  font-size: 28px;
   cursor: pointer;
+  user-select: none;
 }
 
 .hero {
@@ -92,50 +98,6 @@ section {
   transform: translateY(-5px);
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
-  margin: auto;
-}
-
-input, textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-footer {
-  background: #B22222;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    background: #B22222;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    text-align: left;
-  }
-
-  nav a {
-    margin: 15px;
-    display: block;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
-
 .card.libro {
   display: flex;
   flex-direction: column;
@@ -179,4 +141,53 @@ footer {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
   color: #B22222;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer {
+  background: #B22222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #B22222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    margin: 12px;
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
